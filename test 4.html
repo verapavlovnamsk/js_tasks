@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Тест 4</title>
+</head>
+<body>
+
+<p>Введите число: <input type="text" id="mynum"></p>
+	<button onclick="f1()">Угадать</button>
+	<hr>
+	<p id="out"></p>
+	<p id="temp-out"></p>
+
+<script>
+
+	
+	
+	var prNum, tempOut;
+prNum = Math.floor((Math.random() * 10) + 1);
+var answer = 0;
+console.log(prNum);
+
+
+function f1(){
+	var num, out;
+	answer +=1;
+	
+
+	num = document.getElementById('mynum').value;
+	out = document.getElementById('out');
+
+	if (num == prNum) {
+		out.innerHTML = 'You found the number:' + num + 'attempts:' + answer;
+	}
+	else if (num > prNum){
+		out.innerHTML = 'Too high';
+	}
+	else {
+		out.innerHTML = 'Too low';
+	}
+
+}
+</script>
+
+
+
+
+</body>
+</html>
